@@ -1,0 +1,32 @@
+/* Dark mode styles */
+[data-theme="dark"] {
+  --background-color: black; /* Dark mode background color */
+  --color: white; /* Dark mode text color */
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem;
+  border-bottom: 1px solid grey;
+}
+
+nav ul a {
+  padding: 0.7rem 1.5rem;
+  border-radius: 2rem;
+  color: var(--color);
+}
+
+nav ul a:hover {
+  color: white;
+  background: black;
+}
+
+nav ul a.active {
+  color: white;
+  background: black;
+  border-radius: 2rem;
+}
