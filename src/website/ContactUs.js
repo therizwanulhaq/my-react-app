@@ -1,6 +1,6 @@
 function ContactUs(props) {
   return (
-    <div>
+    <div className="center">
       <h2>{props.callTOAction}</h2>
       <h2>{props.heading}</h2>
     </div>

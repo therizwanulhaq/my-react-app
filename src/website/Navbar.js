@@ -3,11 +3,11 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import ToggleButton from "./ToggleButton";
 
-function Navbar({ toggleTheme, theme }) {
+function Navbar() {
   return (
     <nav>
       <ul>
-        <ToggleButton toggleTheme={toggleTheme} theme={theme} />
+        <ToggleButton />
         <NavLink to="/">Home</NavLink>
         <NavLink to="/about-us">About Us</NavLink>
         <NavLink to="/contact-us">Contact Us</NavLink>

@@ -2,8 +2,9 @@
 * {
   margin: 0;
   padding: 0;
-  list-style: none;
+  /* list-style: none; */
   text-decoration: none;
+  box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
 
@@ -11,10 +12,22 @@ html {
   font-size: 16px;
 }
 
-/* App.css */
-:root {
-  --background-color: white; /* Light mode background color */
-  --text-color: black; /* Light mode text color */
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color);
+  color: var(--color);
+}
+
+/* :root {
+  --background-color: white; 
+  --color: black;
+} */
+
+/* Light mode styles */
+[data-theme="light"] {
+  --background-color: white;
+  --color: black;
 }
 
 /* Dark mode styles */
@@ -23,10 +36,13 @@ html {
   --color: white; /* Dark mode text color */
 }
 
-/* Other styles using the variables */
-body {
+.container {
+  height: 100%;
   width: 100%;
-  height: 100vh;
-  background-color: var(--background-color);
-  color: var(--text-color);
+}
+
+.content {
+  min-height: 100vh;
+  width: 100%;
+  padding: 2rem;
 }
