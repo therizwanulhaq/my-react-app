@@ -23,13 +23,11 @@ const ToggleButton = () => {
       <style>
         {`
           body {
-            background-color: ${theme === "light" ? "white" : "black"};
+            background-color: ${theme === "light" ? "white" : "#1C1B22"};
             color: ${theme === "light" ? "black" : "white"};
           }
           nav ul a.active {
-            color: ${
-              theme === "rgb(171, 171, 171)" ? "" : "rgb(171, 171, 121)"
-            };
+            color: ${theme === "light" ? "#6266ec" : "#00DDFF"};
             }
         `}
       </style>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import HomePage from "./Homepage";
@@ -13,10 +13,22 @@ const data = {
 };
 
 const Urls = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    // Fetch data from the API only if it's not already cached
+    if (products.length === 0) {
+      fetch("https://fakestoreapi.com/products")
+        .then((response) => response.json())
+        .then((data) => setProducts(data))
+        .catch((error) => console.error("Error:", error));
+    }
+  }, [products]);
+
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage products={products} />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route
           path="/contact-us"

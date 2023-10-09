@@ -1,8 +1,9 @@
+import Spinner from "./Spinner";
+
 function ContactUs(props) {
   return (
     <div className="center">
-      <h2>{props.callTOAction}</h2>
-      <h2>{props.heading}</h2>
+      <Spinner />
     </div>
   );
 }

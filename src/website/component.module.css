@@ -39,26 +39,14 @@
   width: 30rem;
   padding: 0.5rem;
   font-size: 1rem;
-  border: none;
-  outline: none;
-}
-.searchBoxClose {
-  display: flex;
-  align-items: center;
-  border: 2px solid grey;
+  border: 1px solid rgba(128, 128, 128, 0.275);
   border-radius: 0.3rem;
   outline: none;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
-#closeButton {
-  font-size: 1.5rem;
-  padding: 0.3rem;
-  cursor: pointer;
-}
-
-#closeButton:hover {
-  color: grey;
+.searchBox:focus {
+  border: 1px solid grey;
 }
 
 .productTile {

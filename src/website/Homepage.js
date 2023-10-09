@@ -1,17 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import styles from "../website/component.module.css";
+import Spinner from "./Spinner";
 
-function HomePage() {
-  const [products, setProducts] = useState([]);
+function HomePage({ products }) {
+  // const [products, setProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
 
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((response) => response.json())
-      .then((data) => setProducts(data))
-      .catch((error) => console.error("Error:", error));
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://fakestoreapi.com/products")
+  //     .then((response) => response.json())
+  //     .then((data) => setProducts(data))
+  //     .catch((error) => console.error("Error:", error));
+  // }, []);
 
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(searchQuery.toLowerCase())
@@ -53,7 +54,7 @@ function HomePage() {
           ))}
         </ul>
       ) : (
-        "Loading..."
+        <Spinner />
       )}
     </div>
   );
