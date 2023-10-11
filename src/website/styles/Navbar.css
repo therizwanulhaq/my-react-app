@@ -1,0 +1,24 @@
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 1rem;
+  border-bottom: 1px solid grey;
+}
+
+nav ul a {
+  padding: 0.7rem 1.5rem;
+  border-radius: 2rem;
+  color: var(--color);
+}
+
+nav ul a:hover {
+  background: rgba(128, 128, 128, 0.402);
+}
+
+nav ul a.active {
+  color: var(--color);
+  border-radius: 2rem;
+}

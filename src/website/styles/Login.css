@@ -1,0 +1,33 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85vh;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+form input {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+
+  border: 1px solid black;
+}
+
+form input:focus {
+  outline: 1px solid black;
+}
+
+form button {
+  padding: 0.5rem;
+  width: 100%;
+}
