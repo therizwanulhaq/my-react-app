@@ -1,18 +1,13 @@
 import React, { useState } from "react";
 
-import styles from "../website/component.module.css";
+import styles from "./styles/component.module.css";
 import Spinner from "./Spinner";
+import { useMyContext } from "./contextAPI/Context";
 
-function HomePage({ products }) {
-  // const [products, setProducts] = useState([]);
+function HomePage() {
+  const products = useMyContext();
+
   const [searchQuery, setSearchQuery] = useState("");
-
-  // useEffect(() => {
-  //   fetch("https://fakestoreapi.com/products")
-  //     .then((response) => response.json())
-  //     .then((data) => setProducts(data))
-  //     .catch((error) => console.error("Error:", error));
-  // }, []);
 
   const filteredProducts = products.filter((product) =>
     product.title.toLowerCase().includes(searchQuery.toLowerCase())

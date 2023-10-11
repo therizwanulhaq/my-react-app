@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import styles from "../website/component.module.css";
+import styles from "./styles/component.module.css";
 
 const CountButton = (props) => {
   const [currentCount, setCurrentCount] = useState(0);

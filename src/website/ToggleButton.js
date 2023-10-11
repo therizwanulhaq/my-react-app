@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-import styles from "./component.module.css";
+import styles from "./styles/component.module.css";
 
 const ToggleButton = () => {
   const [theme, setTheme] = useState("light"); // Default theme is "light"

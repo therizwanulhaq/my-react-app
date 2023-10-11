@@ -1,5 +1,5 @@
-import Button from "../components/Button";
-import CountButton from "../components/CountButton";
+import Button from "./Button";
+import CountButton from "./CountButton";
 
 function AboutUs() {
   return (

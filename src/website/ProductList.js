@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useMyContext } from "./contextAPI/Context";
 
-import styles from "../website/component.module.css";
+import styles from "./styles/component.module.css";
 
-function ProductList({ products }) {
+function ProductList() {
+  const products = useMyContext();
   return (
     <div>
       <div className={styles.gridView}>

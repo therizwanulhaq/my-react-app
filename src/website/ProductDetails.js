@@ -1,9 +1,11 @@
 import { useParams } from "react-router-dom";
 
 import Spinner from "./Spinner";
-import styles from "../website/component.module.css";
+import { useMyContext } from "./contextAPI/Context";
+import styles from "./styles/component.module.css";
 
-function ProductDetails({ products }) {
+function ProductDetails() {
+  const products = useMyContext();
   const { id } = useParams();
 
   // Convert the id to a number

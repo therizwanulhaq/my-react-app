@@ -4,7 +4,7 @@ import Navbar from "./website/Navbar";
 import Footer from "./website/Footer";
 
 import "./App.css";
-import Urls from "./website/Routes";
+import Urls from "./website/Urls";
 
 function App() {
   return (
