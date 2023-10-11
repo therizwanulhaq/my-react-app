@@ -71,3 +71,15 @@
   height: 100%;
   object-fit: contain;
 }
+
+.gridView {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.productGrid {
+  width: 15rem;
+  height: 15rem;
+}

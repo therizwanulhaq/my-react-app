@@ -1,3 +1,4 @@
+// Urls.js
 import React, { useState, useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 
@@ -6,6 +7,8 @@ import AboutUs from "./AboutUs";
 import ContactUs from "./ContactUs";
 import Profile from "./Profile";
 import Login from "./Login";
+import ProductList from "./ProductList";
+import ProductDetails from "./ProductDetails";
 
 const data = {
   heading: "+954323444",
@@ -26,7 +29,7 @@ const Urls = () => {
   }, [products]);
 
   return (
-    <>
+    <div>
       <Routes>
         <Route path="/" element={<HomePage products={products} />} />
         <Route path="/about-us" element={<AboutUs />} />
@@ -41,8 +44,13 @@ const Urls = () => {
         />
         <Route path="/profile" element={<Profile />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/products" element={<ProductList products={products} />} />
+        <Route
+          path="products/:id"
+          element={<ProductDetails products={products} />}
+        />
       </Routes>
-    </>
+    </div>
   );
 };
 

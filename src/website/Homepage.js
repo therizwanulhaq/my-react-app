@@ -35,7 +35,7 @@ function HomePage({ products }) {
       </div>
       <h1>Product List</h1>
       {hasProducts ? (
-        <ul>
+        <div>
           {filteredProducts.map((product) => (
             <div key={product.id} className={styles.productTile}>
               <div className={styles.imageContainer}>
@@ -52,7 +52,7 @@ function HomePage({ products }) {
               </div>
             </div>
           ))}
-        </ul>
+        </div>
       ) : (
         <Spinner />
       )}
