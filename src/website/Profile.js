@@ -1,15 +1,20 @@
-// Profile.js
-import React from "react";
-import { useMyContext } from "./contextAPI/Context";
+import { useAuth } from "./contextAPI/AuthContext";
 
 function Profile() {
-  // Use the custom hook to access the shared data
-  const products = useMyContext();
+  const { isLoggedIn, username, logout } = useAuth();
   return (
     <div>
-      {products.map((product) => (
-        <li>{product.title}</li>
-      ))}
+      {isLoggedIn ? (
+        <div>
+          <h2>Profile</h2>
+          <h3>Welcome, {username}</h3>
+          <button onClick={logout}>Logout</button>
+        </div>
+      ) : (
+        <div>
+          <p>Please Login</p>
+        </div>
+      )}
     </div>
   );
 }

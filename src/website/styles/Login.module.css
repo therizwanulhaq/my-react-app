@@ -27,7 +27,7 @@ form input:focus {
   outline: 1px solid black;
 }
 
-form button {
+button {
   padding: 0.5rem;
   width: 100%;
 }

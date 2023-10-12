@@ -1,5 +1,4 @@
 // Urls.js
-import React from "react";
 import { Route, Routes } from "react-router-dom";
 
 import HomePage from "./Homepage";
@@ -12,12 +11,15 @@ import ProductDetails from "./ProductDetails";
 
 import { MyProvider } from "./contextAPI/Context";
 
+import { useAuth } from "./contextAPI/AuthContext";
+
 const data = {
   heading: "+954323444",
   callTOAction: "Reach us at",
 };
 
 const Urls = () => {
+  const { isLoggedIn } = useAuth();
   return (
     <div>
       <MyProvider>
@@ -33,8 +35,13 @@ const Urls = () => {
               />
             }
           />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/login" element={<Login />} />
+          {isLoggedIn ? (
+            // Render Profile component when the user is logged in
+            <Route path="/profile" element={<Profile />} />
+          ) : (
+            // Render Login component when the user is not logged in
+            <Route path="/login" element={<Login />} />
+          )}
           <Route path="/products" element={<ProductList />} />
           <Route path="products/:id" element={<ProductDetails />} />
         </Routes>
