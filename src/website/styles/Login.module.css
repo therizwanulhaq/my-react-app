@@ -10,6 +10,7 @@ form {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  padding: 1rem;
 }
 
 h4 {
@@ -19,7 +20,7 @@ h4 {
 form input {
   padding: 0.5rem;
   font-size: 0.9rem;
-
+  width: 15rem;
   border: 1px solid black;
 }
 
@@ -29,5 +30,17 @@ form input:focus {
 
 button {
   padding: 0.5rem;
-  width: 100%;
+  width: 15rem;
+}
+
+.inputAndError {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error {
+  margin-top: 0.2rem;
+  color: red;
+  font-size: 0.8rem;
 }

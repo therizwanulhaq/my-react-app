@@ -1,9 +1,10 @@
-import Spinner from "./Spinner";
+import React from "react";
 
-function ContactUs(props) {
+function ContactUs({ data }) {
   return (
     <div className="center">
-      <Spinner />
+      <p>{data.heading}</p>
+      <p>{data.subHeading}</p>
     </div>
   );
 }

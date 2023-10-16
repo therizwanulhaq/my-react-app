@@ -11,7 +11,7 @@ function Navbar() {
       <ul>
         <ToggleButton />
         <NavLink to="/">Home</NavLink>
-        <NavLink to="/about-us">About Us</NavLink>
+        {isLoggedIn && <NavLink to="/about-us">About Us</NavLink>}
         <NavLink to="/contact-us">Contact Us</NavLink>
         {isLoggedIn ? (
           <NavLink to="/profile">Profile</NavLink>

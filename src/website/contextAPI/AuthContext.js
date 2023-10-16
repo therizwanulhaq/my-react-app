@@ -5,6 +5,7 @@ const AuthContext = createContext();
 
 function AuthProvider({ children }) {
   const navigate = useNavigate();
+
   const [username, setUsername] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 

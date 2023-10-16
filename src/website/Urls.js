@@ -14,8 +14,8 @@ import { MyProvider } from "./contextAPI/Context";
 import { useAuth } from "./contextAPI/AuthContext";
 
 const data = {
-  heading: "+954323444",
-  callTOAction: "Reach us at",
+  heading: "Reach us at",
+  subHeading: "+954323444",
 };
 
 const Urls = () => {
@@ -25,16 +25,8 @@ const Urls = () => {
       <MyProvider>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route
-            path="/contact-us"
-            element={
-              <ContactUs
-                heading={data.heading}
-                callTOAction={data.callTOAction}
-              />
-            }
-          />
+          {isLoggedIn && <Route path="/about-us" element={<AboutUs />} />}
+          <Route path="/contact-us" element={<ContactUs data={data} />} />
           {isLoggedIn ? (
             // Render Profile component when the user is logged in
             <Route path="/profile" element={<Profile />} />
